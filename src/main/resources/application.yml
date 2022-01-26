@@ -1,11 +1,18 @@
+spring.application.name: betterreads-data-loader
+
+datadump.location:
+  author: /Users/devigoli/Downloads/test-authors.txt
+  works: /Users/devigoli/Downloads/test-works.txt 
 
 spring:
+  main:
+    allow-circular-references: true
   data:
-    cassandra:
+    cassandra: 
       keyspace-name: main
       username: iNGLsEefvcmBwCarhnGlbzKS
       password: Xr,tNYl_KUO_ZqKMBBg634.BU8vF0iwylXi+QRKg_OU8gGloO_LPkgsR+PN0p0-2wny8j4xI8hCAJ6kQZSfK6OlS_3LDdzoTJ,gD9tWxYZNfA9B6o1qhGkMA.kRNPF93
-      schema-action: create-if-not-exists
+      schema-action: recreate
       request:
         timeout: 10s
       connection:
